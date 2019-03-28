@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Moirai</title>
+	<base href="/"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="moirai.css">
+
+	<script src="https://apis.google.com/js/platform.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="moirai.js"></script>
+</head>
+<body>
+<main>
+	<h1>ICal URL (ex: Facebook Events) to Google Calendar Sync</h1>
+	<form name="moraiForm" method="post" action="javascript:void()">
+		<input name="sourceCalendarIcalUrl" type="text" placeholder="Source Calendar Ical Url" class="url-textbox"> <br>
+		<button type="button" onclick="googleSignIn()" class="g-signin2 googleSignIn"></button>
+		<br>
+		<button type="submit" onclick="sync()" class="button button-main">Sync Once</button>
+	</form>
+	<p class="message"></p>
+</main>
+</body>
+</html>
